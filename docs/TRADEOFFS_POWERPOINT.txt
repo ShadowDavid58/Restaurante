@@ -1,0 +1,107 @@
+═══════════════════════════════════════════════════════════════
+  PLANTILLA PARA POWERPOINT - TRADE-OFFS
+═══════════════════════════════════════════════════════════════
+
+TRADE-OFF 1: MICROSERVICIOS VS MONOLITO
+───────────────────────────────────────────────────────────────
+
+┌─────────────────┬──────────────┬──────────────────────┐
+│    Criterio     │   Monolito   │  Microservicios      │
+├─────────────────┼──────────────┼──────────────────────┤
+│ Escalabilidad   │      ⭐⭐      │        ⭐⭐⭐⭐⭐        │
+│                 │   (Baja)     │      (Alta)          │
+├─────────────────┼──────────────┼──────────────────────┤
+│ Complejidad     │    ⭐⭐⭐⭐⭐    │        ⭐⭐           │
+│                 │   (Simple)   │    (Complejo)        │
+├─────────────────┼──────────────┼──────────────────────┤
+│ Costo Inicial   │    ⭐⭐⭐⭐⭐    │        ⭐⭐           │
+│                 │    (Bajo)    │      (Alto)          │
+├─────────────────┼──────────────┼──────────────────────┤
+│ Mantenibilidad  │     ⭐⭐⭐      │      ⭐⭐⭐⭐⭐          │
+│                 │   (Media)    │      (Alta)          │
+├─────────────────┼──────────────┼──────────────────────┤
+│ Despliegue      │      ⭐⭐      │        ⭐⭐⭐⭐⭐        │
+│                 │  (Difícil)   │      (Fácil)         │
+├─────────────────┼──────────────┼──────────────────────┤
+│   DECISIÓN      │      ❌       │        ✅ ELEGIDO     │
+└─────────────────┴──────────────┴──────────────────────┘
+
+JUSTIFICACIÓN:
+Para una app de reservas que necesita escalar en horarios pico,
+los microservicios permiten escalar solo el servicio de reservas
+sin afectar otros. La complejidad se justifica por los beneficios
+a largo plazo.
+
+───────────────────────────────────────────────────────────────
+
+TRADE-OFF 2: CONSISTENCIA VS DISPONIBILIDAD (CAP THEOREM)
+───────────────────────────────────────────────────────────────
+
+┌──────────────────────┬──────────────┬──────────────────┐
+│      Opción          │ Consistencia │ Disponibilidad   │
+├──────────────────────┼──────────────┼──────────────────┤
+│ Consistencia         │   ⭐⭐⭐⭐⭐     │      ⭐⭐          │
+│ Estricta             │  (Alta)      │    (Baja)        │
+├──────────────────────┼──────────────┼──────────────────┤
+│ Disponibilidad      │     ⭐⭐      │    ⭐⭐⭐⭐⭐         │
+│                      │   (Baja)     │    (Alta)        │
+├──────────────────────┼──────────────┼──────────────────┤
+│ Balance              │    ⭐⭐⭐       │     ⭐⭐⭐          │
+│                      │   (Media)    │    (Media)        │
+├──────────────────────┼──────────────┼──────────────────┤
+│   DECISIÓN           │      ❌       │   ✅ ELEGIDO      │
+└──────────────────────┴──────────────┴──────────────────┘
+
+JUSTIFICACIÓN:
+En reservas de restaurantes, es más importante que el sistema
+esté disponible (aunque con ligera inconsistencia temporal) que
+tener consistencia perfecta pero sistema caído.
+
+───────────────────────────────────────────────────────────────
+
+TRADE-OFF 3: RENDIMIENTO VS MANTENIBILIDAD
+───────────────────────────────────────────────────────────────
+
+┌──────────────────┬──────────────┬──────────────────┐
+│     Enfoque      │ Rendimiento  │ Mantenibilidad   │
+├──────────────────┼──────────────┼──────────────────┤
+│ Solo Rendimiento │   ⭐⭐⭐⭐⭐     │      ⭐⭐          │
+│                  │   (Alto)     │    (Baja)        │
+├──────────────────┼──────────────┼──────────────────┤
+│ Solo             │     ⭐⭐      │    ⭐⭐⭐⭐⭐         │
+│ Mantenibilidad   │   (Bajo)     │    (Alta)        │
+├──────────────────┼──────────────┼──────────────────┤
+│ Balance 60/40    │    ⭐⭐⭐       │     ⭐⭐⭐⭐          │
+│                  │   (Media)    │    (Alta)        │
+├──────────────────┼──────────────┼──────────────────┤
+│   DECISIÓN       │      ❌       │   ✅ ELEGIDO      │
+└──────────────────┴──────────────┴──────────────────┘
+
+JUSTIFICACIÓN:
+Para un proyecto académico y futuro profesional, es mejor tener
+código mantenible que optimizaciones prematuras que dificulten
+el mantenimiento.
+
+───────────────────────────────────────────────────────────────
+
+INSTRUCCIONES PARA POWERPOINT:
+───────────────────────────────────────────────────────────────
+
+1. Abre PowerPoint
+2. Crea nueva diapositiva
+3. Insertar → Tabla (3 columnas, 7 filas)
+4. Copia los datos de arriba
+5. Formatea:
+   - Fila 1: Fondo oscuro, texto blanco
+   - Filas de datos: Alternar colores
+   - Última fila: Resaltar en verde (si es elegido)
+6. Agrega estrellas (⭐) usando Insertar → Símbolo
+   O usa números (1-5) o barras de progreso
+
+ALTERNATIVA: Usa gráfico de barras agrupadas
+1. Insertar → Gráfico → Barras agrupadas
+2. Ingresa los datos
+3. Personaliza colores
+
+═══════════════════════════════════════════════════════════════
+

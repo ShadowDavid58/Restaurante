@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de reservas para restaurantes - Reserva tu mesa fácilmente">
+    <title>Restaurante - Reserva tu Mesa</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__brand">
+                    <h1 class="nav__title">🍽️ Restaurante</h1>
+                </div>
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item">
+                        <a href="#inicio" class="nav__link nav__link--active">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#reservas" class="nav__link">Reservas</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#menu" class="nav__link">Menú</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contacto" class="nav__link">Contacto</a>
+                    </li>
+                    <li class="nav__item">
+                        <button class="btn btn--primary" id="loginBtn">Iniciar Sesión</button>
+                    </li>
+                </ul>
+                <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h2 class="hero__title">Bienvenido a Nuestro Restaurante</h2>
+                    <p class="hero__subtitle">Disfruta de la mejor experiencia gastronómica</p>
+                    <a href="#reservas" class="btn btn--large btn--primary">Reservar Mesa</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservas Section -->
+        <section class="section" id="reservas">
+            <div class="container">
+                <h2 class="section__title">Reserva tu Mesa</h2>
+                <div class="reservation-form">
+                    <form id="reservationForm" class="form">
+                        <div class="form__group">
+                            <label for="nombre" class="form__label">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" class="form__input" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email</label>
+                            <input type="email" id="email" name="email" class="form__input" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="telefono" class="form__label">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" class="form__input" required>
+                        </div>
+                        <div class="form__row">
+                            <div class="form__group">
+                                <label for="fecha" class="form__label">Fecha</label>
+                                <input type="date" id="fecha" name="fecha" class="form__input" required>
+                            </div>
+                            <div class="form__group">
+                                <label for="hora" class="form__label">Hora</label>
+                                <input type="time" id="hora" name="hora" class="form__input" required>
+                            </div>
+                            <div class="form__group">
+                                <label for="personas" class="form__label">Número de Personas</label>
+                                <select id="personas" name="personas" class="form__input" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="1">1 persona</option>
+                                    <option value="2">2 personas</option>
+                                    <option value="3">3 personas</option>
+                                    <option value="4">4 personas</option>
+                                    <option value="5">5 personas</option>
+                                    <option value="6">6+ personas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <label for="comentarios" class="form__label">Comentarios (opcional)</label>
+                            <textarea id="comentarios" name="comentarios" class="form__input form__input--textarea" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--block">Confirmar Reserva</button>
+                    </form>
+                    <div id="reservationMessage" class="message"></div>
+                </div>
+
+                <!-- Mis Reservas -->
+                <div class="my-reservations" id="myReservations">
+                    <h3 class="section__subtitle">Mis Reservas</h3>
+                    <div id="reservationsList" class="reservations-list">
+                        <!-- Reservas se cargarán dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menú Section -->
+        <section class="section section--alt" id="menu">
+            <div class="container">
+                <h2 class="section__title">Nuestro Menú</h2>
+                <div class="menu-filters">
+                    <button class="btn btn--filter active" data-category="all">Todos</button>
+                    <button class="btn btn--filter" data-category="entradas">Entradas</button>
+                    <button class="btn btn--filter" data-category="platos">Platos Principales</button>
+                    <button class="btn btn--filter" data-category="postres">Postres</button>
+                    <button class="btn btn--filter" data-category="bebidas">Bebidas</button>
+                </div>
+                <div id="menuItems" class="menu-grid">
+                    <!-- Items del menú se cargarán dinámicamente -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section class="section" id="contacto">
+            <div class="container">
+                <h2 class="section__title">Contacto</h2>
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>📍 Ubicación</h3>
+                        <p>Calle Principal 123, Ciudad</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>📞 Teléfono</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>✉️ Email</h3>
+                        <p>info@restaurante.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>🕐 Horarios</h3>
+                        <p>Lun - Dom: 12:00 PM - 11:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2024 Restaurante. Todos los derechos reservados.</p>
+                <p>Arquitectura: Microservicios + N-Tier + Event-Driven</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal__content">
+            <span class="modal__close" id="closeModal">&times;</span>
+            <h2 class="modal__title">Iniciar Sesión</h2>
+            <form id="loginForm" class="form">
+                <div class="form__group">
+                    <label for="loginEmail" class="form__label">Email</label>
+                    <input type="email" id="loginEmail" name="email" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="loginPassword" class="form__label">Contraseña</label>
+                    <input type="password" id="loginPassword" name="password" class="form__input" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">Iniciar Sesión</button>
+            </form>
+            <div id="loginMessage" class="message"></div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loader" id="loader">
+        <div class="loader__spinner"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/reservations.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

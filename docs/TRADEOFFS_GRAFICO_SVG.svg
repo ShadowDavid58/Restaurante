@@ -1,0 +1,75 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Título -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#212529">
+    Trade-off: Microservicios vs Monolito
+  </text>
+  
+  <!-- Tabla -->
+  <rect x="50" y="80" width="700" height="450" fill="white" stroke="#dee2e6" stroke-width="2" rx="8"/>
+  
+  <!-- Encabezado -->
+  <rect x="50" y="80" width="700" height="50" fill="#0d6efd" rx="8 8 0 0"/>
+  <text x="200" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Criterio</text>
+  <text x="400" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Monolito</text>
+  <text x="600" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Microservicios</text>
+  
+  <!-- Líneas divisorias -->
+  <line x1="50" y1="130" x2="750" y2="130" stroke="#dee2e6" stroke-width="1"/>
+  <line x1="300" y1="80" x2="300" y2="530" stroke="#dee2e6" stroke-width="1"/>
+  <line x1="500" y1="80" x2="500" y2="530" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Fila 1: Escalabilidad -->
+  <text x="200" y="165" font-family="Arial, sans-serif" font-size="14" fill="#212529" text-anchor="middle">Escalabilidad</text>
+  <circle cx="400" cy="155" r="15" fill="#dc3545" opacity="0.4"/>
+  <text x="400" y="160" font-family="Arial, sans-serif" font-size="12" fill="#212529" text-anchor="middle">2</text>
+  <circle cx="600" cy="155" r="15" fill="#28a745" opacity="0.4"/>
+  <text x="600" y="160" font-family="Arial, sans-serif" font-size="12" fill="#212529" text-anchor="middle">5</text>
+  <line x1="50" y1="175" x2="750" y2="175" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Fila 2: Complejidad -->
+  <text x="200" y="210" font-family="Arial, sans-serif" font-size="14" fill="#212529" text-anchor="middle">Complejidad</text>
+  <circle cx="400" cy="200" r="15" fill="#28a745" opacity="0.4"/>
+  <text x="400" y="205" font-family="Arial, sans-serif" font-size="12" fill="#212529" text-anchor="middle">5</text>
+  <circle cx="600" cy="200" r="15" fill="#dc3545" opacity="0.4"/>
+  <text x="600" y="205" font-family="Arial, sans-serif" font-size="12" fill="#212529" text-anchor="middle">2</text>
+  <line x1="50" y1="220" x2="750" y2="220" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Fila 3: Costo -->
+  <text x="200" y="255" font-family="Arial, sans-serif" font-size="14" fill="#212529" text-anchor="middle">Costo Inicial</text>
+  <circle cx="400" cy="245" r="15" fill="#28a745" opacity="0.4"/>
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="12" fill="#212529" text-anchor="middle">5</text>
+  <circle cx="600" cy="245" r="15" fill="#dc3545" opacity="0.4"/>
+  <text x="600" y="250" font-family="Arial, sans-serif" font-size="12" fill="#212529" text-anchor="middle">2</text>
+  <line x1="50" y1="265" x2="750" y2="265" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Fila 4: Mantenibilidad -->
+  <text x="200" y="300" font-family="Arial, sans-serif" font-size="14" fill="#212529" text-anchor="middle">Mantenibilidad</text>
+  <circle cx="400" cy="290" r="15" fill="#ffc107" opacity="0.4"/>
+  <text x="400" y="295" font-family="Arial, sans-serif" font-size="12" fill="#212529" text-anchor="middle">3</text>
+  <circle cx="600" cy="290" r="15" fill="#28a745" opacity="0.4"/>
+  <text x="600" y="295" font-family="Arial, sans-serif" font-size="12" fill="#212529" text-anchor="middle">5</text>
+  <line x1="50" y1="310" x2="750" y2="310" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Fila 5: Despliegue -->
+  <text x="200" y="345" font-family="Arial, sans-serif" font-size="14" fill="#212529" text-anchor="middle">Despliegue</text>
+  <circle cx="400" cy="335" r="15" fill="#dc3545" opacity="0.4"/>
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="12" fill="#212529" text-anchor="middle">2</text>
+  <circle cx="600" cy="335" r="15" fill="#28a745" opacity="0.4"/>
+  <text x="600" y="340" font-family="Arial, sans-serif" font-size="12" fill="#212529" text-anchor="middle">5</text>
+  <line x1="50" y1="355" x2="750" y2="355" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Decisión -->
+  <rect x="50" y="355" width="700" height="50" fill="#e9ecef" rx="0 0 8 8"/>
+  <text x="200" y="385" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#212529" text-anchor="middle">Decisión</text>
+  <text x="400" y="385" font-family="Arial, sans-serif" font-size="14" fill="#dc3545" text-anchor="middle">❌</text>
+  <text x="600" y="385" font-family="Arial, sans-serif" font-size="14" fill="#28a745" text-anchor="middle">✅ ELEGIDO</text>
+  
+  <!-- Leyenda -->
+  <text x="400" y="560" font-family="Arial, sans-serif" font-size="12" fill="#6c757d" text-anchor="middle">
+    Escala: 1 (Bajo) - 5 (Alto)
+  </text>
+</svg>
+
